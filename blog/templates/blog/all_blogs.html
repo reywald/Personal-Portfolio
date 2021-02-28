@@ -7,6 +7,17 @@
     <title>All blogs</title>
 </head>
 <body>
-    My Blog
+    <div class="heading">
+        <h1>Blog</h1>
+        <h2>Ikechukwu has written {{ blogs.count }} blog</h2>
+    </div>
+    
+    <div class="contents">
+        {% for blog in blogs %}
+            <h2>{{ blog.title }}</h2>
+            <h5>{{ blog.date }}</h5>
+            <p>{{ blog.description }}</p>
+        {% endfor %}
+    </div>
 </body>
 </html>
